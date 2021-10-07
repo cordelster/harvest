@@ -4495,7 +4495,7 @@
         "allValue": null,
         "current": {},
         "datasource": "${DS_PROMETHEUS}",
-        "definition": "label_values(lun_labels{datacenter=\"$Datacenter\"}, cluster)",
+        "definition": "label_values(lun_labels{system_type!=\"7mode\",datacenter=\"$Datacenter\"}, cluster)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -4505,7 +4505,7 @@
         "name": "Cluster",
         "options": [],
         "query": {
-          "query": "label_values(lun_labels{datacenter=\"$Datacenter\"}, cluster)",
+          "query": "label_values(lun_labels{system_type!=\"7mode\",datacenter=\"$Datacenter\"}, cluster)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -4521,7 +4521,7 @@
         "allValue": null,
         "current": {},
         "datasource": "${DS_PROMETHEUS}",
-        "definition": "label_values(lun_labels{datacenter=\"$Datacenter\",cluster=\"$Cluster\"}, svm)",
+        "definition": "label_values(lun_labels{system_type!=\"7mode\",datacenter=\"$Datacenter\",cluster=\"$Cluster\"}, svm)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -4531,7 +4531,7 @@
         "name": "SVM",
         "options": [],
         "query": {
-          "query": "label_values(lun_labels{datacenter=\"$Datacenter\",cluster=\"$Cluster\"}, svm)",
+          "query": "label_values(lun_labels{system_type!=\"7mode\",datacenter=\"$Datacenter\",cluster=\"$Cluster\"}, svm)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -4547,7 +4547,7 @@
         "allValue": null,
         "current": {},
         "datasource": "${DS_PROMETHEUS}",
-        "definition": "label_values(lun_labels{datacenter=\"$Datacenter\",cluster=\"$Cluster\",svm=~\"$SVM\"}, volume)",
+        "definition": "label_values(lun_labels{system_type!=\"7mode\",datacenter=\"$Datacenter\",cluster=\"$Cluster\",svm=~\"$SVM\"}, volume)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -4557,7 +4557,7 @@
         "name": "Volume",
         "options": [],
         "query": {
-          "query": "label_values(lun_labels{datacenter=\"$Datacenter\",cluster=\"$Cluster\",svm=~\"$SVM\"}, volume)",
+          "query": "label_values(lun_labels{system_type!=\"7mode\",datacenter=\"$Datacenter\",cluster=\"$Cluster\",svm=~\"$SVM\"}, volume)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -4573,7 +4573,7 @@
         "allValue": null,
         "current": {},
         "datasource": "${DS_PROMETHEUS}",
-        "definition": "label_values(lun_labels{datacenter=\"$Datacenter\",cluster=\"$Cluster\",svm=~\"$SVM\", volume=~\"$Volume\"},lun)",
+        "definition": "label_values(lun_labels{system_type!=\"7mode\",datacenter=\"$Datacenter\",cluster=\"$Cluster\",svm=~\"$SVM\", volume=~\"$Volume\"},lun)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -4583,7 +4583,7 @@
         "name": "LUN",
         "options": [],
         "query": {
-          "query": "label_values(lun_labels{datacenter=\"$Datacenter\",cluster=\"$Cluster\",svm=~\"$SVM\", volume=~\"$Volume\"},lun)",
+          "query": "label_values(lun_labels{system_type!=\"7mode\",datacenter=\"$Datacenter\",cluster=\"$Cluster\",svm=~\"$SVM\", volume=~\"$Volume\"},lun)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
